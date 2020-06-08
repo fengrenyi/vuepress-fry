@@ -117,7 +117,7 @@ module.exports = {
         },
         {
           title: '通过百度搜索本站的',
-          frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20'
+          //frontUrl: 'https://www.baidu.com/s?wd=site%3Axugaoyi.com%20'
         }
       ]
     }],
@@ -156,7 +156,7 @@ module.exports = {
       }
     ],
     [
-      // 'vuepress-plugin-comment', // 评论
+      'vuepress-plugin-comment', // 评论
       // {
       //   choosen: 'valine', 
       //   options: {
@@ -168,18 +168,19 @@ module.exports = {
       {
         choosen: 'gitalk', 
         options: {
-          clientID: '9c27922324212ba39a5e',
-          clientSecret: 'c3c1293109ee32d7456c203e91261d9abfc4a1b1',
+          clientID: '12ddebac2ab0df3adf41',
+          clientSecret: '7e79a20216dfb2543411f4cb4737130ea65c9840',
           repo: 'vuepress-fry', // GitHub 仓库
-          owner: 'fengreyi', // GitHub仓库所有者
-          admin: ['fengreyi'], // 对仓库有写权限的人
+          owner: 'fengrenyi', // GitHub仓库所有者
+          admin: ['fengrenyi'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>", //  页面的唯一标识,长度不能超过50
           title: "「评论」<%- frontmatter.title %>", // GitHub issue 的标题
           labels: ["Gitalk", "Comment"], // GitHub issue 的标签
           body:"页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>" // GitHub issue 的内容
-        }
+
+       }
       }
     ],
     [
